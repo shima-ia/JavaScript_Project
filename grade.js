@@ -1,12 +1,12 @@
-let num = prompt("จำนวนคน")
+let num = prompt("จำนวนคน") //รับค่าจำนวนคน
 for(var i = 1; i <= num; i++){
-    let Name = prompt("กรอกชื่อ")
-    let score = prompt("กรอกคะแนน")
-    let result = tograde(score) 
-    document.getElementById("result").innerHTML += "<br>ชื่อ:" + Name + " คะแนน:" + score + " เกรด: " + result
+    let Name = prompt("กรอกชื่อ") //ลูปรายชื่อตามจำนวนคนที่รับมา
+    let score = prompt("กรอกคะแนน") //กรอกคะแนนของแต่คนตามรายชื่อ
+    let result = tograde(score) //เพิ่มตัวเเปรเพื่อรับค่า score
+    document.getElementById("result").innerHTML += "<br>ชื่อ:" + Name + " คะแนน:" + score + " เกรด: " + result //แสดงผล
 }
-function tograde(score){
-    let grade = " "
+function tograde(score){ //ฟังก์ชั่นเช็คเกรด
+    let grade = " " 
     if(score >= 80){
         grade = "A"
     }else if(score >= 75 && score <= 79){
